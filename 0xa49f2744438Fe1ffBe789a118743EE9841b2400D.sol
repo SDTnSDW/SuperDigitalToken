@@ -1,5 +1,5 @@
 /**
- *Submitted for verification at BscScan.com on 2022-08-10
+ *Submitted for verification at BscScan.com on 2022-08-23
 */
 
 /*
@@ -1390,7 +1390,7 @@ contract SuperDigitalToken is ERC20, Ownable {
         rewardsFeeOnBuy = _rewardsFeeOnBuy;
         liquidityFeeOnBuy = _liquidityFeeOnBuy;
         totalFees = marketingFeeOnBuy + rewardsFeeOnBuy + liquidityFeeOnBuy;
-        require(totalFees <= 15, "Max fee allowed is 15%");
+        require(totalFees <= 12, "Max fee allowed is 12%");
     }
 
     function updateSellFees(uint8 _marketingFeeOnSell, uint8 _rewardsFeeOnSell, uint8 _liquidityFeeOnSell) external onlyOwner {
@@ -1398,7 +1398,7 @@ contract SuperDigitalToken is ERC20, Ownable {
         rewardsFeeOnSell = _rewardsFeeOnSell;
         liquidityFeeOnSell = _liquidityFeeOnSell;
         totalFees = marketingFeeOnSell + rewardsFeeOnSell + liquidityFeeOnSell;
-        require(totalFees <= 15, "Max fee allowed is 15%");
+        require(totalFees <= 12, "Max fee allowed is 12%");
     }
 
     function updateUniswapV2Router(address newAddress) external onlyOwner {
